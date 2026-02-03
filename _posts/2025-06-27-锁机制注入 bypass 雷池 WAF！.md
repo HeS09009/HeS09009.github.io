@@ -6,7 +6,7 @@ tags: [SQL注入, Bypass WAF, Web安全]
 media_subpath: /
 ---
 
-# 锁机制注入 bypass 雷池 WAF！
+## 前言
 
 在 SQL 注入的延时注入中，常见的函数有 `sleep()` 直接延时、`BENCHMARK()` 通过让数据库进行大量的计算而达到延时的效果、笛卡尔积、正则匹配等，但还有一个常常被忽略的函数，也就是 MySQL 中的锁机制。虽然早些年就已经出现过相关技术文章，但它的应用却几乎见不到，也没有文章对其机制和运用进行深入讲解，而且该函数也常常被 WAF 忽略导致延时。:contentReference[oaicite:1]{index=1}
 
