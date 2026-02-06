@@ -90,17 +90,17 @@ GET_LOCK('test2', 10)
  
 而在同一个会话内部，即使多次请求相同的锁，也不会造成阻塞，会直接返回成功，因为该会话已经持有该锁。
 
-![](assets/img/2025062701/3.png)
+![](assets/img/2025062701/4.png)
 
 **示例：**
  
 会话1先通过GET_LOCK()函数获取了名为1的锁，返回结果为1表示获取成功
 
-![](assets/img/2025062701/4.png)
+![](assets/img/2025062701/5.png)
 
 会话2再次通过GET_LOCK()函数获取名为1的锁，但是名为1的锁以及被会话1占有，所以会话2直到超时5秒，结果为0表示获取失败
 
-![](assets/img/2025062701/5.png)
+![](assets/img/2025062701/6.png)
 
 **锁释放规则：**
  
@@ -118,7 +118,7 @@ SHOW VARIABLES LIKE 'wait_timeout'
  
 可以查看会话超时时间（秒），这里是2分钟
 
-![](assets/img/2025062701/6.png)
+![](assets/img/2025062701/7.png)
 
 ```sql
 SET SESSION wait_timeout = 600;
@@ -126,7 +126,7 @@ SET SESSION wait_timeout = 600;
  
 可以通过该函数来设置wait_timeout参数
 
-![](assets/img/2025062701/7.png)
+![](assets/img/2025062701/8.png)
 
 通过网上搜索发现wait_timeout参数的默认值是8小时，但是我的数据库默认就是2分钟，也没有看到官方的具体说明，可能是受到Mysql版本的影响。
 
