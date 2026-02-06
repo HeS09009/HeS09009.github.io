@@ -126,7 +126,7 @@ SET SESSION wait_timeout = 600;
  
 可以通过该函数来设置wait_timeout参数
 
-![](assets/img/2025062701/6.png)
+![](assets/img/2025062701/7.png)
 
 通过网上搜索发现wait_timeout参数的默认值是8小时，但是我的数据库默认就是2分钟，也没有看到官方的具体说明，可能是受到Mysql版本的影响。
 
